@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+<p>@ViewBag.pessoaId</p>
+<p>@ViewData["pessoaNome"]</p>
+<p>@ViewData["pessoaTwitter"]</p>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>form1</title>
+</head>
+<body>
+    <div> 
+        <form method="post" action="Home/Lista">
+            <div>
+                <label for="pessoaId">
+                    Codigo
+                </label>
+            </div>
+            <div>
+                <input type="number" id="pessoaId" name="pessoaId" value="@Model.pessoaId" />
+            </div>
+            <div>
+                <label for="nome">
+                    Nome
+                </label>
+            </div>
+            <div>
+                <input type="text" id="nome" name="nome" value="@Model.nome" />
+            </div>
+            <div>
+                <label for="twitter">
+                    Twitter
+                </label>
+            </div>
+            <div>
+                <input type="text" id="twitter" name="twitter" value="@Model.twitter" />
+            </div>
+            <button>Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

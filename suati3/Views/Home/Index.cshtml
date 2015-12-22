@@ -1,0 +1,43 @@
+﻿@model suati3.Models.Pessoa
+<!--
+    model suati3.Models.Pessoa definir que a view é tipada
+    model nome projeto model classe
+-->
+@{
+    ViewBag.Title = "Home Page";
+}
+<p>@ViewBag.pessoaId</p>
+<p>@ViewData["pessoaNome"]</p>
+<p>@ViewData["pessoaTwitter"]</p>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+</head>
+<body>
+@using (Html.BeginForm("Lista","Home",FormMethod.Post)) {
+        <div>
+           @Html.LabelFor(x => x.pessoaId)
+        </div>
+        <div>
+           @Html.EditorFor(x => x.pessoaId)
+        </div>
+        <div>
+           @Html.LabelFor(x => x.nome)
+        </div>
+        <div>
+           @Html.EditorFor(x => x.nome)
+        </div>
+        <div>
+           @Html.LabelFor(x => x.twitter)
+        </div>
+        <div>
+           @Html.EditorFor(x => x.twitter)
+        </div>
+        <button>Enviar</button>
+}
+
+    </body>
+</html>
